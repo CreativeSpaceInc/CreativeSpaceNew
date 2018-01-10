@@ -1,8 +1,8 @@
 //src/page/Login/Login.js
 import React, { Component } from "react";
+import { FormBtn, FormDiv } from "../../components/Form";
+import { Col, Container, Row } from "../../components/Grid";
 import { Nav, NavLi } from "../../components/Nav";
-import { Container } from "../../components/Grid";
-import { FormBtn } from "../../components/Form";
 
 class Logout extends Component {
 
@@ -19,19 +19,29 @@ class Logout extends Component {
   render() {
     return (
       <Container>
-      <Nav>
-          <NavLi>Home</NavLi>
-          <NavLi>About</NavLi>
-          <NavLi>My profile</NavLi>
-      </Nav>
-      <form>
-        <h1 className="my-4"><i className="fa fa-sign-in"></i> Log Out</h1>
-        <FormBtn
-          onClick={this.logout}>Log Out
-        </FormBtn>
-      </form>
-      <hr />
-      <p><a href="/home">Home</a></p>
+        <Nav>
+          <NavLi href="/">Home</NavLi>
+          <NavLi href="/about">About</NavLi>
+          <NavLi href="/search">Search</NavLi>
+          <NavLi href="/profile">Profile</NavLi>
+          <NavLi href="/editprofile">Edit profile</NavLi>
+          <NavLi href="/update">Update</NavLi>
+        </Nav>
+        <Row>
+          <Col size="md-8">
+          <h1 className="my-4"><i className="fa fa-sign-out"></i> Log Out</h1>
+          <hr />
+          <h3> Click to log out </h3>
+          <form className="card-background">
+              <FormBtn
+                className="btn btn-block btn-lg"
+                onClick={this.logout}>Log Out
+              </FormBtn>
+          </form>
+          <hr />
+          </Col>
+        </Row>
+        <p>Not looking to log out? Return <a href="/home">Home</a></p>
       </Container>
     );
   }
