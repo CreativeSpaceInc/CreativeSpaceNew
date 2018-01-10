@@ -1,0 +1,15 @@
+.btn {
+	background: #3b6589; 
+	color: white;
+}
+.card-background {
+	background: #cccccc;
+	border-radius: 10px;
+	padding: 10px;
+}
+.danger {
+	color: red;
+}
+.success {
+	color: green;
+}
