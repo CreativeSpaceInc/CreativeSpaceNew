@@ -16,11 +16,11 @@ class Home extends Component {
       <div>
       <Container>
         <Nav>
-          <NavLi>Home</NavLi>
-          <NavLi>About</NavLi>
-          <NavLi>Search</NavLi>
-          <NavLi>Edit profile</NavLi>
-          <NavLi>Log out</NavLi>
+          <NavLi href="/home">Home</NavLi>
+          <NavLi href="/about">About</NavLi>
+          <NavLi href="/search">Search</NavLi>
+          <NavLi href="/editprofile">Edit profile</NavLi>
+          <NavLi href="/logout">Log out</NavLi>
         </Nav>
         <br /> <br />
         <Row>
