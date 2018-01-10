@@ -1,9 +1,18 @@
 .btn {
-	background: orange; 
+	background: #3b6589; 
+	color: white;
+}
+.danger {
+	color: red;
+}
+.input-group-addon {
+	width: 33%;
+	background: #ededed;
 }
 .success {
 	color: green;
 }
-.danger {
-	color: red;
+#card-background {
+	background: #cccccc;
+	border-radius: 10px;
 }

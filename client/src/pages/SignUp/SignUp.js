@@ -1,77 +1,108 @@
 // client/src/pages/Profile/Signup.js
 import React, { Component } from "react";
+import API from "../../utils/API";
 import { Container } from "../../components/Grid";
+import { DisplayMessage } from "../../components/DisplayMessage";
 import { Nav, NavLi } from "../../components/Nav";
 import { FormBtn, FormDiv, Input } from "../../components/Form";
-// import { Link } from "react-router-dom";
+// eslint-disable-next-line
+import { Link } from "react-router-dom";
+import "./SignUp.css";
 
 class Signup extends Component {
-
-  constructor(props) {
-    super(props);
-    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+  state = {
+    displayname: "",
+    username: "",
+    password: "",
+    artist: "5a34a9d1afaabc1820db0b32",
+    message: ""
   };
-
-  handleFormSubmit = event => {
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+  successMessage = () => {
+    this.setState({ 
+      message: 'Success! You have signed up. You may $lt;Link to="/upload"$gt;upload$lt;/Link$gt; a creation.',
+      className: "success"
+    });
+  };
+  failMessage = () => {
+    this.setState({
+      message: 'Registration failed. Please try again.',
+      className: "danger"
+    });
+  };
+  handleArtistSubmit = event => {
     event.preventDefault();
-    if(null === this.props.validateForm()){
-      alert('All fields are required.');
-      return;
+    console.log('the button was clicked');
+    if (this.state.displayname && this.state.username && this.state.password) {
+      API.saveArtist({
+        displayname: this.state.displayname,
+        username: this.state.username,
+        password: this.state.password,
+        artist: this.state.artist
+      })
+        .then(this.successMessage())
+        .catch(err => console.log(err));
     } else {
-      this.props.registerArtist();
+      this.failMessage();
     }
   };
-
 
   render() {
     return (
       <Container>
         <Nav>
-          <NavLi>Home</NavLi>
-          <NavLi>About</NavLi>
-          <NavLi>My profile</NavLi>
-          <NavLi>Log in</NavLi>
+          <NavLi href="/home">Home</NavLi>
+          <NavLi href="/about">About</NavLi>
+          <NavLi href="/search">Search</NavLi>
+          <NavLi href="/login">Log in</NavLi> 
         </Nav>
         <h1 className="my-4"><span className="fa fa-user-plus"></span> Sign up</h1>
-        <form>
+        <DisplayMessage 
+          value={this.state.message}
+          onChange={this.handleInputChange}
+          className={this.state.className}
+          name="message">{this.state.message}
+        </DisplayMessage>        
+        <form className="card-background" action="/upload" method="get">
           <FormDiv>
-            <label>Display Name</label>
             <Input
-              value={this.props.displayname}
-              onChange={this.props.handleInputChange}
+              value={this.state.displayname}
+              onChange={this.handleInputChange}
               placeholder="Display name"
               name="displayname"
             />
           </FormDiv>
           <FormDiv>
-            <label>Username</label>
             <Input
-              value={this.props.username}
-              onChange={this.props.handleInputChange}
+              value={this.state.username}
+              onChange={this.handleInputChange}
               placeholder="Username"
               name="username"
             />
           </FormDiv>
           <FormDiv>
-            <label>Password</label>
-            <Input
+            <Input 
               type="password"
-              value={this.props.password}
-              onChange={this.props.handleInputChange}
+              value={this.state.password}
+              onChange={this.handleInputChange}
               placeholder="Password"
               name="password"
             />
           </FormDiv>
-          <FormBtn onClick={this.handleFormSubmit}>
-            Sign up
+          <FormBtn
+            onClick={this.handleArtistSubmit}>Sign up
           </FormBtn>
         </form>
-        <hr/>
+        <hr />
         <p>Already have an account? <a href="/login">Log in</a></p>
         <p>Or click <a href="/home">Home</a></p>
       </Container>
     );
   }
 }
-//
 export default Signup;

@@ -1,0 +1,61 @@
+.btn {
+	background: #3b6589;
+	color: white;
+}
+.card-background {
+	background: #cccccc;
+	border-radius: 10px;
+	padding: 10px;
+}
+.input-group-addon {
+	width: 33%;
+	background: #ededed;
+}
+#creationDanger {
+	color: red;
+}
+#creationSuccess {
+	color: green;
+}
+#displaynameDanger {
+	color: red;
+}
+#displaynameSuccess {
+	color: green;
+}
+#avatarDanger {
+	color: red;
+}
+#avatarSuccess {
+	color: green;
+}
+#bioDanger {
+	color: red;
+}
+#bioSuccess {
+	color: green;
+}
+#usernameDanger {
+	color: red;
+}
+#usernameSuccess {
+	color: green;
+}
+#emailDanger {
+	color: red;
+}
+#emailSuccess {
+	color: green;
+}
+#occupationDanger {
+	color: red;
+}
+#occupationSuccess {
+	color: green;
+}
+#locationDanger {
+	color: red;
+}
+#locationSuccess {
+	color: green;
+}
