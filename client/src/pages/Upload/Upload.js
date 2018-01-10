@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import { Nav, NavLi } from "../../components/Nav";
-import DisplayMessage from "../../components/DisplayMessage";
+import { DisplayMessage } from "../../components/DisplayMessage";
 // import { Link } from "react-router-dom";
 import { FormBtn, FormDiv, Input, TextArea } from "../../components/Form";
 import { Container } from "../../components/Grid";

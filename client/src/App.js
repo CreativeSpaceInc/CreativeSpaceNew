@@ -16,6 +16,7 @@ import Home from "./pages/Home";
 // import Artists from "./pages/Artists";
 import Footer from "./components/Footer";
 
+
 class App extends React.Component{
   constructor(props) {
     super(props);
@@ -129,6 +130,30 @@ class App extends React.Component{
   // artistNotLoggedIn = () => {
   //   console.log('the artist is NOT logged in')
   // };
+
+  // ***************************************************************************
+  //--------------UPLOADING ARTWORK--------------------------------------------
+  //****************************************************************************
+ 
+ successMessage = () => {
+    this.setState({ 
+      message: 'Success! Your creation has been saved.',
+      className: "success" 
+    });
+  };
+
+  uploadArt = () => {
+
+     API.upload({
+      medium: this.state.medium,
+      title: this.state.title,
+      description: this.state.description
+      })
+
+      .then(res => this.successMessage())
+        .catch(err => console.log(err));
+  };  
+  
 
   render() {
     return(
