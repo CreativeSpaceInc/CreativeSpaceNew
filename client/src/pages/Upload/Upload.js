@@ -57,7 +57,7 @@ class Upload extends Component {
     return (
       <Container>
         <Nav>
-          <NavLi href="/home">Home</NavLi>
+          <NavLi href="/">Home</NavLi>
           <NavLi href="/about">About</NavLi>
           <NavLi href="/search">Search</NavLi>
           <NavLi href="/profile">Profile</NavLi>

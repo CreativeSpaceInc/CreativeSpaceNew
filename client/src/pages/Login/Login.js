@@ -24,7 +24,7 @@ class Login extends Component {
   };
   successMessage = () => {
     this.setState({ 
-      message: 'Success! You have logged in. You may visit your `{<Link>profile</Link>}`.',
+      message: 'Success! You have logged in.',
       className: "success"
     });
   };
@@ -54,7 +54,7 @@ class Login extends Component {
     return (
       <Container>
       <Nav>
-          <NavLi href="/home">Home</NavLi>
+          <NavLi href="/">Home</NavLi>
           <NavLi href="/about">About</NavLi>
           <NavLi href="/search">Search</NavLi>
           <NavLi href="/signup">Sign up</NavLi> 
@@ -90,7 +90,7 @@ class Login extends Component {
       </form>
       <hr />
       <p>Don't have an account? <a href="/">Sign up</a></p>
-      <p>Or click <a href="/home">Home</a></p>
+      <p>Or return <a href="/">Home</a></p>
       </Container>
     );
   }

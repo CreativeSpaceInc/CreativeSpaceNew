@@ -41,7 +41,7 @@ class Logout extends Component {
           <hr />
           </Col>
         </Row>
-        <p>Not looking to log out? Return <a href="/home">Home</a></p>
+        <p>Not looking to log out? Return <a href="/">Home</a></p>
       </Container>
     );
   }

@@ -56,7 +56,7 @@ class Signup extends Component {
     return (
       <Container>
         <Nav>
-          <NavLi href="/home">Home</NavLi>
+          <NavLi href="/">Home</NavLi>
           <NavLi href="/about">About</NavLi>
           <NavLi href="/search">Search</NavLi>
           <NavLi href="/login">Log in</NavLi> 
@@ -100,7 +100,7 @@ class Signup extends Component {
         </form>
         <hr />
         <p>Already have an account? <a href="/login">Log in</a></p>
-        <p>Or click <a href="/home">Home</a></p>
+        <p>Or return <a href="/home">Home</a></p>
       </Container>
     );
   }
