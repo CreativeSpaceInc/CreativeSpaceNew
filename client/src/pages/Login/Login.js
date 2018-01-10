@@ -12,7 +12,8 @@ class Login extends Component {
   state = {
     username: "",
     password: "",
-    artist: "5a34a9d1afaabc1820db0b32"
+    artist: "5a34a9d1afaabc1820db0b32",
+    message: ""
   };
   // handle any changes to the input fields
   handleInputChange = event => {
