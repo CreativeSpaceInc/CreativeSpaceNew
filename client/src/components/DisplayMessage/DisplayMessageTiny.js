@@ -1,9 +1,9 @@
 import React from "react";
 
-export const DisplayMessage = props =>
+export const DisplayMessageTiny = props =>
 	<div>
-		<h1 
+		<p 
 	      	type="text"
 	      	{...props}>
-	    </h1>
+	    </p>
 	</div>;

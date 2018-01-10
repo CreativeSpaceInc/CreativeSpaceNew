@@ -1,1 +1,2 @@
-export { default } from "./DisplayMessage";
+export * from "./DisplayMessage";
+export * from "./DisplayMessageTiny";
