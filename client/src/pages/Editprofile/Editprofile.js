@@ -57,7 +57,7 @@ class Editprofile extends Component {
           emailMessage: "",
           occupationMessage: "",
           locationMessage: "",  
-          style: 'creationSuccess'
+          className: 'success'
         }))
         .catch(err => console.log(err));
     } else {
@@ -70,7 +70,7 @@ class Editprofile extends Component {
         emailMessage: "",
         occupationMessage: "",
         locationMessage: "", 
-        id: 'creationDanger'
+        className: 'danger'
       });
     }
   };
@@ -91,7 +91,7 @@ class Editprofile extends Component {
           emailMessage: "",
           occupationMessage: "",
           locationMessage: "",
-          id: 'displaynameSuccess'
+          className: 'success'
         }))
         .catch(err => console.log(err));
     } else {
@@ -104,7 +104,7 @@ class Editprofile extends Component {
         emailMessage: "",
         occupationMessage: "",
         locationMessage: "",
-        id: 'displaynameDanger'
+        className: 'danger'
       });
     }
   };
@@ -335,11 +335,10 @@ class Editprofile extends Component {
         <Row>
           <Col size="md-8">
             <h3 className="my-4">Add Creation</h3>
-            <p 
+            <DisplayMessageTiny 
               value={this.state.creationMessage}
-              onChange={this.handleInputChange}
-              id={this.state.id}>{this.state.creationMessage}
-            </p>
+              className={this.state.className}>{this.state.creationMessage}
+            </DisplayMessageTiny>
             <form className="card-background">
               <FormDiv>
                 <Input 
@@ -393,10 +392,9 @@ class Editprofile extends Component {
             <h3 className="my-4">Artist Details</h3>
             <form className="card-background">              
               <DisplayMessageTiny 
-                  value={this.state.displaynameMessage}
-                  onChange={this.handleInputChange}
-                  id={this.state.id}>{this.state.displaynameMessage}
-                </DisplayMessageTiny>
+                value={this.state.displaynameMessage}
+                className={this.state.className}>{this.state.displaynameMessage}
+              </DisplayMessageTiny>
               <FormDiv>         
                 <Input 
                   id="input-display-name"
@@ -412,7 +410,6 @@ class Editprofile extends Component {
                 <label>(Avatar will be displayed within 150px by 150px)</label>
                 <DisplayMessageTiny 
                   value={this.state.avatarMessage}
-                  onChange={this.handleInputChange}
                   className={this.state.className}>{this.state.avatarMessage}
                 </DisplayMessageTiny>
                 <Input 
@@ -427,7 +424,6 @@ class Editprofile extends Component {
               </FormDiv>
               <DisplayMessageTiny 
                 value={this.state.bioMessage}
-                onChange={this.handleInputChange}
                 className={this.state.className}>{this.state.bioMessage}
               </DisplayMessageTiny>
               <FormDiv>
@@ -449,7 +445,6 @@ class Editprofile extends Component {
             <form className="card-background">
               <DisplayMessageTiny 
                 value={this.state.usernameMessage}
-                onChange={this.handleInputChange}
                 className={this.state.className}>{this.state.usernameMessage}
               </DisplayMessageTiny>
               <FormDiv>
@@ -465,7 +460,6 @@ class Editprofile extends Component {
               </FormDiv>
               <DisplayMessageTiny 
                 value={this.state.emailMessage}
-                onChange={this.handleInputChange}
                 className={this.state.className}>{this.state.emailMessage}
               </DisplayMessageTiny>
               <FormDiv>
@@ -481,7 +475,6 @@ class Editprofile extends Component {
               </FormDiv>
               <DisplayMessageTiny 
                 value={this.state.occupationMessage}
-                onChange={this.handleInputChange}
                 className={this.state.className}>{this.state.occupationMessage}
               </DisplayMessageTiny>
               <FormDiv>
@@ -497,7 +490,6 @@ class Editprofile extends Component {
               </FormDiv> 
               <DisplayMessageTiny 
                 value={this.state.locationMessage}
-                onChange={this.handleInputChange}
                 className={this.state.className}>{this.state.locationMessage}
               </DisplayMessageTiny>
               <FormDiv>

@@ -47,7 +47,6 @@ class Login extends Component {
     } else {
       this.failMessage()
     }
-    //this.setState({ username: "", password: "" });
   };
 
   render() {
@@ -63,9 +62,7 @@ class Login extends Component {
       <form className="card-background">
         <DisplayMessage 
           value={this.state.message}
-          onChange={this.handleInputChange}
-          className={this.state.className}
-          name="message">{this.state.message}
+          className={this.state.className}>{this.state.message}
         </DisplayMessage> 
         <FormDiv>
           <Input

@@ -25,7 +25,7 @@ class Signup extends Component {
   };
   successMessage = () => {
     this.setState({ 
-      message: 'Success! You have signed up. You may $lt;Link to="/upload"$gt;upload$lt;/Link$gt; a creation.',
+      message: 'Success! You have signed up.',
       className: "success"
     });
   };
@@ -64,9 +64,7 @@ class Signup extends Component {
         <h1 className="my-4"><span className="fa fa-user-plus"></span> Sign up</h1>
         <DisplayMessage 
           value={this.state.message}
-          onChange={this.handleInputChange}
-          className={this.state.className}
-          name="message">{this.state.message}
+          className={this.state.className}>{this.state.message}
         </DisplayMessage>        
         <form className="card-background" action="/upload" method="get">
           <FormDiv>

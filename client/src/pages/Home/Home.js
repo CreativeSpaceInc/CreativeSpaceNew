@@ -23,34 +23,61 @@ class Home extends Component {
           <NavLi href="/login">Log in</NavLi>
           <NavLi href="/signup">Sign up</NavLi>          
         </Nav>
-        <br /> <br />
+        <br /><br />
         <Row>
-             <div class="col-lg-3 col-md-3">
-                <h2 class="my-4 rotate">Browse Creations:</h2>
-                <div class="list-group">
-                  <a href="#" class="list-group-item mouseoverStyle">Artwork</a>
-                  <a href="#" class="list-group-item mouseoverStyle">Music</a>
-                  <a href="#" class="list-group-item mouseoverStyle">Writing</a>
-                  <a href="#" class="list-group-item mouseoverStyle">Video</a>
-                </div>
-              </div>
-
-              <div id="carouselExampleSlidesOnly" class="carousel slide col-lg-9 col-md-9" data-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img class="d-block w-100" src="http://placehold.it/900x350" alt="First slide"></img>
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="..." alt="Second slide"></img>
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="..." alt="Third slide"></img>
-                      </div>
-                    </div>
-              </div>
-      </Row>
-               <br />      <br />
-      
+          <div className="col-lg-3 col-md-3">
+            <h2 className="my-4 rotate">Browse Creations:</h2>
+            <div className="list-group">
+              <a href="#" className="list-group-item mouseoverStyle">Artwork</a>
+              <a href="#" className="list-group-item mouseoverStyle">Music</a>
+              <a href="#" className="list-group-item mouseoverStyle">Writing</a>
+              <a href="#" className="list-group-item mouseoverStyle">Video</a>
+            </div>
+          </div>
+          <div id="carouselExampleSlidesOnly" className="carousel slide col-lg-9 col-md-9" data-ride="carousel">
+            <CarDiv>
+              <ol className="carousel-indicators" style={{borderBottom:"0px"}}>
+                <CarLi data-slide-to="0" className="active"></CarLi>
+                <CarLi data-slide-to="1"></CarLi>
+                <CarLi data-slide-to="2"></CarLi>
+                <CarLi data-slide-to="3"></CarLi>
+              </ol>
+              <CarItem className="carousel-item active">
+                <CarImg 
+                  src="http://placehold.it/900x350" 
+                  alt="First slide"></CarImg>
+              </CarItem>
+              <CarItem>
+                <CarImg 
+                  src="http://placehold.it/900x350" 
+                  alt="Second slide"></CarImg>
+              </CarItem>
+              <CarItem>
+                <CarImg 
+                  src="http://placehold.it/900x350" 
+                  alt="Third slide"></CarImg>
+              </CarItem>
+              <CarItem>
+                <CarImg 
+                  src="http://placehold.it/900x350" 
+                  alt="Fourth slide"></CarImg>
+              </CarItem>
+            </CarDiv>
+            <CarA 
+              className="carousel-control-prev" 
+              data-slide="prev">
+              <span className="carousel-control-prev-icon"></span>
+              <span className="sr-only">Previous</span>
+            </CarA>
+            <CarA 
+              className="carousel-control-next" 
+              data-slide="next">
+              <span className="carousel-control-next-icon" aria-hidden="true"></span>
+              <span className="sr-only">Next</span>
+            </CarA>
+          </div>
+        </Row>
+        <br /><br />
         <Row>
           <Col size="sm-6 md-3" className="mb-4" name="1">
             <a href="/">

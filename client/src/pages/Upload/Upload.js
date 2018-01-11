@@ -66,7 +66,6 @@ class Upload extends Component {
         </Nav>
         <h1 className="my-4"><i className="fa fa-picture-o"></i> Upload Your Creation</h1>
         <DisplayMessage 
-          name="message"
           value={this.state.message}
           className={this.state.className}>{this.state.message}
         </DisplayMessage>

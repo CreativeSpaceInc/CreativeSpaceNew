@@ -46,9 +46,7 @@ class Profile extends Component {
           <Col size="md-8">
             <h1 className="my-4">Featured Creations</h1>
             <form className="card-background">
-
             <div id="carouselExampleIndicators" className="carousel slide my-4" data-ride="carousel">
-
               <CarDiv>
               <ol className="carousel-indicators" style={{borderBottom:"0px"}}>
                 <CarLi data-slide-to="0" className="active"></CarLi>
